@@ -7,7 +7,6 @@ const {
 } = require('./converters');
 const applescript = require('applescript');
 
-
 const getJpgContextMenu = () => {
   const contextMenu = [
     {
@@ -91,6 +90,6 @@ const getPngContextMenu = () => {
 };
 
 module.exports = {
-    getPngContextMenu,
-    getJpgContextMenu,
-}
+  getPngContextMenu,
+  getJpgContextMenu,
+};
