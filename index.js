@@ -2,6 +2,7 @@ const { app, BrowserWindow, Tray, nativeImage } = require('electron');
 const path = require('path');
 const { getJpgContextMenu, getPngContextMenu } = require('./contexts');
 const { selectedFileScript } = require('./scripts');
+const applescript = require('applescript');
 
 let tray;
 
@@ -16,7 +17,6 @@ const createWindow = () => {
 };
 
 let contextMenu = null;
-
 const rightClickHandler = () => {
   applescript.execString(selectedFileScript, async (err, rtn) => {
     if (err) {
@@ -51,3 +51,7 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
+
+try {
+  require('electron-reloader')(module)
+} catch (_) {}

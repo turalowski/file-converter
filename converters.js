@@ -15,7 +15,7 @@ function convertPngToJpg(filePath) {
 }
 
 function convertPngToWebP(filePath) {
-  const outputPath = filePath.replace('.png', '.jpg');
+  const outputPath = filePath.replace('.png', '.webp');
   sharp(filePath)
     .webp()
     .toFile(outputPath, err => {
@@ -28,7 +28,7 @@ function convertPngToWebP(filePath) {
 }
 
 function convertPngToGif(filePath) {
-  const outputPath = filePath.replace('.png', '.jpg');
+  const outputPath = filePath.replace('.png', '.gif');
   sharp(filePath)
     .gif()
     .toFile(outputPath, err => {
@@ -41,7 +41,7 @@ function convertPngToGif(filePath) {
 }
 
 function convervtPngToAvif(filePath) {
-  const outputPath = filePath.replace('.png', '.jpg');
+  const outputPath = filePath.replace('.png', '.avif');
   sharp(filePath)
     .avif()
     .toFile(outputPath, err => {
