@@ -11,6 +11,6 @@ const selectedFileScript = `
    return thePath
    `;
 
-   module.exports = {
-    selectedFileScript
-   }
+module.exports = {
+  selectedFileScript,
+};
